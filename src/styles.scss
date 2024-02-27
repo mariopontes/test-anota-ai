@@ -1,3 +1,8 @@
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #efefef;
     margin: 0;
@@ -8,6 +13,6 @@ body {
 }
 
 .container {
-    max-width: 1510px;
+    max-width: 1509px;
     margin: auto;
 }
