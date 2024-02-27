@@ -6,7 +6,7 @@
         display: flex;
         align-items: center;
         position: relative;
-        width: 755px;
+        max-width: 755px;
         margin: auto;
 
         .search-input {
@@ -45,6 +45,11 @@
 
 
     .container-cards {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        row-gap: 26px;
+        gap: 26px;
         padding: 28px;
     }
 }

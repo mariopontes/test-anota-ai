@@ -12,6 +12,6 @@
     </div>
 
     <div class="container-cards">
-        <app-card></app-card>
+        <app-card *ngFor="let card of listCard" [card]="card"></app-card>
     </div>
 </div>

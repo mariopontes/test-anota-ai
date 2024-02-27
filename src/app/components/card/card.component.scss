@@ -4,6 +4,7 @@
     background-color: white;
     border-radius: 6px;
     overflow: hidden;
+    box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.33);
 
     .content-img {
         display: flex;
@@ -22,7 +23,7 @@
             background: #3636fc;
             color: white;
             font-size: 11px;
-            padding: 1px 4px;
+            padding: 2px 4px;
             border-radius: 4px;
             font-weight: bold;
         }
