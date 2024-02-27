@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { CardModel } from 'src/app/models/card-model';
+import { CardService } from 'src/app/services/card.service';
 
 @Component({
   selector: 'app-home',
@@ -14,15 +15,21 @@ export class HomeComponent implements OnInit {
 
   searchText = new FormControl('');
 
-  constructor(private http: HttpClient) {
+  constructor(private cardService: CardService) {
   }
 
   ngOnInit(): void {
-    this.http.get<CardModel[]>('http://aai-frontend-interview-mock-data.s3-website-sa-east-1.amazonaws.com/cardlist.json').subscribe(
-      res => {
-        this.listCard = res;
-      }
-    )
+    this.getCards();
+  }
 
+  getCards() {
+    this.cardService.getCards().subscribe({
+      next: data => {
+        this.listCard = data;
+      },
+      error: error => {
+        alert('Não foi possivel relizar a consulta de Cards');
+      }
+    })
   }
 }
