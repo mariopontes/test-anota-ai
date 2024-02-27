@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { CardModel } from 'src/app/models/card-model';
 
 @Component({
@@ -11,8 +12,9 @@ export class HomeComponent implements OnInit {
   searchBarFocused: boolean = false;
   listCard: CardModel[] = []
 
-  constructor(private http: HttpClient) {
+  searchText = new FormControl('');
 
+  constructor(private http: HttpClient) {
   }
 
   ngOnInit(): void {

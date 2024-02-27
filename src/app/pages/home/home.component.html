@@ -2,7 +2,7 @@
 
 <div class="container">
     <div class="search-bar" (focusin)="searchBarFocused = true" (focusout)="searchBarFocused = false" [ngClass]="{'focused': searchBarFocused}">
-        <input class="search-input" type="text">
+        <input class="search-input" type="text" [formControl]="searchText">
         <button class="search-button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path
@@ -12,6 +12,6 @@
     </div>
 
     <div class="container-cards">
-        <app-card *ngFor="let card of listCard" [card]="card"></app-card>
+        <app-card *ngFor="let card of listCard | filter: searchText.value" [card]="card"></app-card>
     </div>
 </div>
