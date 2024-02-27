@@ -7,11 +7,24 @@
 
     .content-img {
         display: flex;
+        position: relative;
 
         img {
             object-fit: cover;
             width: 100%;
             height: 140px;
+        }
+
+        .badge {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background: #3636fc;
+            color: white;
+            font-size: 11px;
+            padding: 1px 4px;
+            border-radius: 4px;
+            font-weight: bold;
         }
     }
 
