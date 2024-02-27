@@ -12,4 +12,8 @@ export class CardService {
   getCards() {
     return this.http.get<CardModel[]>('http://aai-frontend-interview-mock-data.s3-website-sa-east-1.amazonaws.com/cardlist.json')
   }
+
+  deleteCard(id: number, cardList: CardModel[]) {
+    return cardList.filter(card => card.id !== id)
+  }
 }

@@ -12,6 +12,6 @@
     </div>
 
     <div class="container-cards">
-        <app-card *ngFor="let card of listCard | filter: searchText.value" [card]="card"></app-card>
+        <app-card *ngFor="let card of listCard | filter: searchText.value" [card]="card" (deleteCardAction)="deleteCard($event)"></app-card>
     </div>
 </div>

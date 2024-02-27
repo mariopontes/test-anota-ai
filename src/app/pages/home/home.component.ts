@@ -32,4 +32,8 @@ export class HomeComponent implements OnInit {
       }
     })
   }
+
+  deleteCard(id: number) {
+    this.listCard = this.cardService.deleteCard(id, this.listCard);
+  }
 }

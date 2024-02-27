@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CardModel } from 'src/app/models/card-model';
 
 @Component({
@@ -9,6 +9,7 @@ import { CardModel } from 'src/app/models/card-model';
 
 export class CardComponent implements OnInit {
   @Input() card!: CardModel;
+  @Output() deleteCardAction = new EventEmitter();
 
   titleBadge!: string;
   colorBadge!: string;
@@ -24,5 +25,9 @@ export class CardComponent implements OnInit {
 
   setColorBadge() {
     this.colorBadge = this.card.type === '1' ? '#3636fc' : this.card.type === '2' ? '#ff004b' : '#8d8b0b'
+  }
+
+  deleteCard() {
+    this.deleteCardAction.emit(this.card.id);
   }
 }
