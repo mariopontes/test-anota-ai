@@ -1,56 +1,61 @@
 header {
     width: 100%;
-    height: 60px;
+    height: 61px;
     background: white;
-    box-shadow: 0px 0px 4px -1px rgb(0 0 0 / 63%);
+    box-shadow: 0px 0px 7px -1px rgba(0, 0, 0, 0.33);
 
     .content-header {
         display: flex;
         align-items: center;
         height: 100%;
-        gap: 8px;
+        gap: 7px;
         padding: 0px 6px;
 
+
+
         img {
-            width: 48px;
+            width: 50px;
         }
 
         h2 {
             font-size: 18px;
             font-weight: normal;
             margin: 0;
-            margin-bottom: 2px;
+            margin-bottom: 1px;
+            letter-spacing: -0.2px;
         }
 
-        .content-name {
-            display: flex;
-            align-items: center;
+        .header-description {
+            margin-top: -2px;
 
-            p {
-                font-style: italic;
-                font-size: 14px;
-                color: #747474;
-                margin: 0;
-                padding: 0 5px;
-            }
+            .content-name {
+                display: flex;
+                align-items: center;
 
-            .initial-line {
-                height: 1px;
-                width: 8px;
-                background-color: #747474;
-                margin-top: 3px;
-            }
+                p {
+                    font-style: italic;
+                    font-size: 14px;
+                    color: #747474;
+                    margin: 0;
+                    padding: 0 4px;
+                }
 
-            .final-line {
-                height: 1px;
-                width: 40px;
-                background-color: #747474;
-                margin-top: 3px;
+                .initial-line {
+                    height: 1px;
+                    width: 8px;
+                    background-color: #747474;
+                    margin-top: 3px;
+                    margin-left: 3px;
+                }
+
+                .final-line {
+                    height: 1px;
+                    width: 40px;
+                    background-color: #747474;
+                    margin-top: 3px;
+                }
             }
         }
-
 
     }
-
-
 }
